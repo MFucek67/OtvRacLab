@@ -1,0 +1,35 @@
+football_club_name,football_club_country,football_club_city,football_club_founded,football_club_league,football_club_nickname,football_club_colors,football_club_mascots,football_club_official_page,last_updated,stadium_name,stadium_city,stadium_country,stadium_capacity,trophy_name,trophy_number
+Real Madrid,Spain,Madrid,1902,LaLiga,Los Merengues,white,,https://www.realmadrid.com,2026-10-31T19:40:09.893Z,Santiago Bernabeu,Madrid,Spain,83816,Champions League Winner,15
+Real Madrid,Spain,Madrid,1902,LaLiga,Los Merengues,white,,https://www.realmadrid.com,2026-10-31T19:40:09.893Z,Santiago Bernabeu,Madrid,Spain,83816,LaLiga Winner,36
+Real Madrid,Spain,Madrid,1902,LaLiga,Los Merengues,white,,https://www.realmadrid.com,2026-10-31T19:40:09.893Z,Santiago Bernabeu,Madrid,Spain,83816,Copa Del Rey Winner,20
+Barcelona,Spain,Barcelona,1899,LaLiga,Blaugrana,blue|red,CAT,https://www.fcbarcelona.com,2026-10-31T19:40:09.893Z,Camp Nou,Barcelona,Spain,62657,Champions League Winner,5
+Barcelona,Spain,Barcelona,1899,LaLiga,Blaugrana,blue|red,CAT,https://www.fcbarcelona.com,2026-10-31T19:40:09.893Z,Camp Nou,Barcelona,Spain,62657,LaLiga Winner,29
+Barcelona,Spain,Barcelona,1899,LaLiga,Blaugrana,blue|red,CAT,https://www.fcbarcelona.com,2026-10-31T19:40:09.893Z,Camp Nou,Barcelona,Spain,62657,Copa Del Rey Winner,32
+Bayern München,Germany,München,1900,Bundesliga,Der FCB,red|white,Berni,https://fcbayern.com,2026-10-31T19:40:09.893Z,Allianz Arena,München,Germany,75024,Champions League Winner,6
+Bayern München,Germany,München,1900,Bundesliga,Der FCB,red|white,Berni,https://fcbayern.com,2026-10-31T19:40:09.893Z,Allianz Arena,München,Germany,75024,Bundesliga Winner,35
+Bayern München,Germany,München,1900,Bundesliga,Der FCB,red|white,Berni,https://fcbayern.com,2026-10-31T19:40:09.893Z,Allianz Arena,München,Germany,75024,DFB-Pokal Winner,21
+Borussia Dortmund,Germany,Dortmund,1909,Bundesliga,Der BVB,black|yellow,EMMA,https://www.bvb.de,2026-10-31T19:40:09.893Z,Signal Iduna Park,Dortmund,Germany,81365,Champions League Winner,1
+Borussia Dortmund,Germany,Dortmund,1909,Bundesliga,Der BVB,black|yellow,EMMA,https://www.bvb.de,2026-10-31T19:40:09.893Z,Signal Iduna Park,Dortmund,Germany,81365,Bundesliga Winner,8
+Borussia Dortmund,Germany,Dortmund,1909,Bundesliga,Der BVB,black|yellow,EMMA,https://www.bvb.de,2026-10-31T19:40:09.893Z,Signal Iduna Park,Dortmund,Germany,81365,DFB-Pokal Winner,5
+Dinamo Zagreb,Croatia,Zagreb,1945,Hrvatska nogometna liga,Modri,blue,Plavko,https://gnkdinamo.hr/,2026-10-31T19:40:09.893Z,Stadion Maksimir,Zagreb,Croatia,35123,Inter-Cities Fairs Cup Winner,1
+Dinamo Zagreb,Croatia,Zagreb,1945,Hrvatska nogometna liga,Modri,blue,Plavko,https://gnkdinamo.hr/,2026-10-31T19:40:09.893Z,Stadion Maksimir,Zagreb,Croatia,35123,HNL Winner,26
+Dinamo Zagreb,Croatia,Zagreb,1945,Hrvatska nogometna liga,Modri,blue,Plavko,https://gnkdinamo.hr/,2026-10-31T19:40:09.893Z,Stadion Maksimir,Zagreb,Croatia,35123,Croatian Cup Winner,18
+Hajduk Split,Croatia,Split,1911,Hrvatska nogometna liga,Bili,white,Rico,https://hajduk.hr/,2026-10-31T19:40:09.893Z,Poljud,Split,Croatia,34183,HNL Winner,6
+Hajduk Split,Croatia,Split,1911,Hrvatska nogometna liga,Bili,white,Rico,https://hajduk.hr/,2026-10-31T19:40:09.893Z,Poljud,Split,Croatia,34183,Croatian Cup Winner,8
+Mladost Ždralovi,Croatia,Ždralovi,1933,Druga NL,Ždralovi,red|black,,https://mladost-zdralovi.hr/,2026-10-31T19:40:09.893Z,"Stadion ""Brdo""",Ždralovi,Croatia,1000,3. HNL - North Champion,5
+Wolverhampton Wanderers,England,Wolverhampton,1877,Championship,Wolves,gold|black,Wolfie|Wendy|Wilfred,https://www.wolves.co.uk/,2026-10-31T19:40:09.893Z,Molineux Stadium,Wolverhampton,England,31750,English First Division Winner,3
+Wolverhampton Wanderers,England,Wolverhampton,1877,Championship,Wolves,gold|black,Wolfie|Wendy|Wilfred,https://www.wolves.co.uk/,2026-10-31T19:40:09.893Z,Molineux Stadium,Wolverhampton,England,31750,FA Cup Winner,4
+Chelsea,England,London,1905,Premier League,The Blues,blue|white,Stamford|Bridget,https://www.chelseafc.com/en,2026-10-31T19:40:09.893Z,Stamford Bridge,London,England,40044,Champions League Winner,2
+Chelsea,England,London,1905,Premier League,The Blues,blue|white,Stamford|Bridget,https://www.chelseafc.com/en,2026-10-31T19:40:09.893Z,Stamford Bridge,London,England,40044,Europa League Winner,2
+Chelsea,England,London,1905,Premier League,The Blues,blue|white,Stamford|Bridget,https://www.chelseafc.com/en,2026-10-31T19:40:09.893Z,Stamford Bridge,London,England,40044,Conference League Winner,1
+Chelsea,England,London,1905,Premier League,The Blues,blue|white,Stamford|Bridget,https://www.chelseafc.com/en,2026-10-31T19:40:09.893Z,Stamford Bridge,London,England,40044,Premier League Winner,6
+Chelsea,England,London,1905,Premier League,The Blues,blue|white,Stamford|Bridget,https://www.chelseafc.com/en,2026-10-31T19:40:09.893Z,Stamford Bridge,London,England,40044,FA Cup Winner,8
+AC Milan,Italy,Milano,1899,Serie A,Rossoneri,black|red,Milanello,https://www.acmilan.com/,2026-10-31T19:40:09.893Z,San Siro (Giuseppe Meazza),Milano,Italy,75923,Champions League Winner,7
+AC Milan,Italy,Milano,1899,Serie A,Rossoneri,black|red,Milanello,https://www.acmilan.com/,2026-10-31T19:40:09.893Z,San Siro (Giuseppe Meazza),Milano,Italy,75923,Serie A Winner,19
+AC Milan,Italy,Milano,1899,Serie A,Rossoneri,black|red,Milanello,https://www.acmilan.com/,2026-10-31T19:40:09.893Z,San Siro (Giuseppe Meazza),Milano,Italy,75923,Coppa Italia Winner,5
+Inter Milan,Italy,Milano,1908,Serie A,Nerazzurri,black|blue,,https://www.inter.it/,2026-10-31T19:40:09.893Z,San Siro (Giuseppe Meazza),Milano,Italy,75923,Champions League Winner,3
+Inter Milan,Italy,Milano,1908,Serie A,Nerazzurri,black|blue,,https://www.inter.it/,2026-10-31T19:40:09.893Z,San Siro (Giuseppe Meazza),Milano,Italy,75923,Serie A Winner,21
+Inter Milan,Italy,Milano,1908,Serie A,Nerazzurri,black|blue,,https://www.inter.it/,2026-10-31T19:40:09.893Z,San Siro (Giuseppe Meazza),Milano,Italy,75923,Coppa Italia Winner,10
+Ferencvárosi TC,Hungary,Budapest,1899,Nemzeti Bajnokság I,Fradi,green|white,,https://www.fradi.hu/,2026-10-31T19:40:09.893Z,Groupama Arena,Budapest,Hungary,23698,Inter-Cities Fairs Cup Winner,1
+Ferencvárosi TC,Hungary,Budapest,1899,Nemzeti Bajnokság I,Fradi,green|white,,https://www.fradi.hu/,2026-10-31T19:40:09.893Z,Groupama Arena,Budapest,Hungary,23698,Hungarian League Winner,36
+Ferencvárosi TC,Hungary,Budapest,1899,Nemzeti Bajnokság I,Fradi,green|white,,https://www.fradi.hu/,2026-10-31T19:40:09.893Z,Groupama Arena,Budapest,Hungary,23698,Hungarian Cup Winner,25

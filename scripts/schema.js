@@ -4,6 +4,7 @@ use("football_clubs_db");
 db.trophies.drop();
 db.football_clubs.drop();
 db.stadiums.drop();
+db.leagues.drop()
 
 db.createCollection(
     "stadiums", {
@@ -42,7 +43,7 @@ db.createCollection(
             $jsonSchema: {
                 bsonType: "object",
                 required: ["football_club_name", "football_club_country", "football_club_city", "football_club_founded",
-                    "football_club_stadium_id", "football_club_colors", "last_updated"
+                    "football_club_stadium_id", "football_club_league_id", "football_club_colors", "last_updated"
                 ],
                 properties: {
                     football_club_name: {
@@ -62,13 +63,13 @@ db.createCollection(
                         minimum: 1800,
                         description: "Year when football club is founded."
                     },
-                    football_club_league: {
-                        bsonType: "string",
-                        description: "Name of league football club is currently playing."
-                    },
                     football_club_stadium_id: {
                         bsonType: "objectId",
-                        description: "Reference to document in stadium collection."
+                        description: "Reference to document in stadiums collection."
+                    },
+                    football_club_league_id: {
+                        bsonType: "objectId",
+                        description: "Reference to document in leagues collection."
                     },
                     football_club_nickname: {
                         bsonType: ["string", "null"],
@@ -122,6 +123,36 @@ db.createCollection(
                     trophy_football_club_id: {
                         bsonType: "objectId",
                         description: "Reference to document in football_clubs collection."
+                    }
+                }
+            }
+        }
+    }
+); 
+
+db.createCollection(
+    "leagues", {
+        validator: {
+            $jsonSchema: {
+                bsonType: "object",
+                required: ["league_name", "league_country", "league_level", "league_number_of_teams"],
+                properties: {
+                    league_name: {
+                        bsonType: "string",
+                        description: "Name of the football league."
+                    },
+                    league_country: {
+                        bsonType: "string",
+                        description: "League's country of origin."
+                    },
+                    league_level: {
+                        bsonType: "int",
+                        minimum: 1,
+                        description: "Competition rank that the league represents."
+                    },
+                    league_number_of_teams: {
+                        bsonType: "int",
+                        description: "Number of football teams that play in league."
                     }
                 }
             }

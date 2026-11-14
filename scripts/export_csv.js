@@ -1,9 +1,10 @@
 use("football_clubs_db");
 
 const football_club_headers = [
-    "football_club_name", "football_club_country", "football_club_city", "football_club_founded", "football_club_league",
-    "football_club_nickname", "football_club_colors", "football_club_mascots", "football_club_official_page", "last_updated",
-    "stadium_name", "stadium_city", "stadium_country", "stadium_capacity", "trophy_name", "trophy_number"
+    "football_club_name", "football_club_country", "football_club_city", "football_club_founded", "football_club_nickname",
+    "football_club_colors", "football_club_mascots", "football_club_official_page", "last_updated",
+    "stadium_name", "stadium_city", "stadium_country", "stadium_capacity", "league_name", "league_country", "league_level",
+    "league_number_of_teams", "trophy_name", "trophy_number"
 ]
 
 let result = db.football_clubs.aggregate([
@@ -17,6 +18,17 @@ let result = db.football_clubs.aggregate([
     },
     {
         $unwind: "$stadium"
+    },
+    {
+        $lookup: {
+            from: "leagues",
+            localField: "football_club_league_id",
+            foreignField: "_id",
+            as: "league"
+        }
+    },
+    {
+        $unwind: "$league"
     },
     {  
         $lookup: {
@@ -34,6 +46,8 @@ let result = db.football_clubs.aggregate([
             "_id": 0,
             "football_club_stadium_id": 0,
             "stadium._id": 0,
+            "football_club_league_id": 0,
+            "league._id": 0,
             "trophies.trophy_football_club_id": 0,
             "trophies._id": 0
         }
@@ -52,12 +66,12 @@ function getValue(obj, header) {
 
     //attribute we are looking for is in child object or missing - we need to look in child
     for(const key of Object.keys(obj)) {
-        if((key === "stadium") || (key === "trophies")) {
+        if((key === "stadium") || (key === "trophies") || (key === "league")) {
             if(header in obj[key]) {
                 if(obj[key][header] != null) {
                     let value = obj[key][header];
                     if(Array.isArray(value)) {
-                        return value.join(" and ")
+                        return value.join("|")
                     } else {
                         return value;
                     }

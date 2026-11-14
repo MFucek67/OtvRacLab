@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marko Fuček">
+    <meta name="description" content="Pregled i pretraživanje europskih nogometnih klubova.">
+    <meta name="version" content="1.0">
+    <title>Football Clubs Dataset</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <script src="/static/script.js" defer></script>
+    <div class="container">
+        <header>
+            <h2>Football Clubs Dataset</h2>
+            <h5>Skup otvorenih podataka o nogometnim klubovima</h5>
+        </header>
+        <div class="desc">
+            <p>
+                Ovaj otvoren skup podataka drži podatke o europskim nogometnim klubovima, njihovim stadionima i osvojenim trofejima.
+                Podaci su organizirani u četiri zasebne kolekcije - <b>stadiums</b>, <b>football_clubs</b>, <b>leagues</b> i <b>trophies</b>.
+            </p>
+            <p>
+                Skup podataka obuhvaća 12 nogometnih klubova, 11 stadiona, 8 liga i 34 zapisa o osvojenim trofejima. Za svaki
+                klub dostupni su podaci o:
+            </p>
+            <ul>
+                <li>nazivu kluba</li>
+                <li>gradu i državi kluba</li>
+                <li>godini osnutka</li>
+                <li>podaci ligi u kojoj klub trenutačno igra (ime, država, rang i broj natjecatelja)</li>
+                <li>nadimku kluba</li>
+                <li>bojama koje opisuju klub</li>
+                <li>maskotama kluba</li>
+                <li>poveznica na službene stranice kluba</li>
+                <li>podaci o stadionu na kojem klub igra (ime, grad, državu i kapacitet)</li>
+                <li>podaci o najznačajnijim trofejima koje je klub kroz svoju povijest osvojio (naziv i količina)</li>
+                <li>datumu i vrijeme kada su podaci zadnji put osvježeni</li>
+            </ul>
+
+            <p>
+                Svaki nogometni klub povezan je s jednim stadionom, dok jedan stadion može biti povezan s više klubova.
+            </p>
+            <p>
+                Svaki zapis o ligi povezan je s jednim nogometnim klubom, a zato više klubova može pripadati istoj ligi.
+            </p>
+            <p>
+                Svaki zapis o trofeju povezan je s jednim nogometnim klubom, a klub može imati više osvojenih trofeja.
+            </p>
+            <div class="download">
+                <a href="/clubs/export/football_clubs.csv" download>Preuzmi sve podatke (format CSV)</a>
+                <a href="/clubs/export/football_clubs.json" download>Preuzmi sve podatke (format JSON)</a>
+            </div>
+        </div>
+        <button class="table_button" onclick="go_to(window.location.href.concat('table'))">
+            Tablični pregled podataka
+        </button>
+    </div>
+</body>
+</html>

@@ -80,6 +80,68 @@ stadiums.forEach(element => {
     stadiumIds[element.stadium_name] = element._id;
 });
 
+db.leagues.insertMany(
+    [
+        {
+            league_name: "LaLiga",
+            league_country: "Spain",
+            league_level: NumberInt(1),
+            league_number_of_teams: NumberInt(20)
+        },
+        {
+            league_name: "Bundesliga",
+            league_country: "Germany",
+            league_level: NumberInt(1),
+            league_number_of_teams: NumberInt(18)
+        },
+        {
+            league_name: "Hrvatska nogometna liga",
+            league_country: "Croatia",
+            league_level: NumberInt(1),
+            league_number_of_teams: NumberInt(10)
+        },
+        {
+            league_name: "Prva NL",
+            league_country: "Croatia",
+            league_level: NumberInt(2),
+            league_number_of_teams: NumberInt(16)
+        },
+        {
+            league_name: "Championship",
+            league_country: "England",
+            league_level: NumberInt(2),
+            league_number_of_teams: NumberInt(24)
+        },
+        {
+            league_name: "Premier League",
+            league_country: "England",
+            league_level: NumberInt(1),
+            league_number_of_teams: NumberInt(20)
+        },
+        {
+            league_name: "Serie A",
+            league_country: "Italy",
+            league_level: NumberInt(1),
+            league_number_of_teams: NumberInt(20)
+        },
+        {
+            league_name: "Nemzeti Bajnokság I",
+            league_country: "Hungary",
+            league_level: NumberInt(1),
+            league_number_of_teams: NumberInt(12)
+        }
+    ]
+);
+
+print("Leagues inserted successfully.");
+
+const leagues = db.leagues.find().toArray();
+
+const leagueIds = {};
+leagues.forEach(element => {
+    leagueIds[element.league_name] = element._id;
+});
+
 db.football_clubs.insertMany(
     [
         {
@@ -87,7 +149,7 @@ db.football_clubs.insertMany(
             football_club_country: "Spain",
             football_club_city: "Madrid",
             football_club_founded: NumberInt(1902),
-            football_club_league: "LaLiga",
+            football_club_league_id: leagueIds["LaLiga"],
             football_club_stadium_id: stadiumIds["Santiago Bernabeu"],
             football_club_nickname: "Los Merengues",
             football_club_colors: ["white"],
@@ -100,7 +162,7 @@ db.football_clubs.insertMany(
             football_club_country: "Spain",
             football_club_city: "Barcelona",
             football_club_founded: NumberInt(1899),
-            football_club_league: "LaLiga",
+            football_club_league_id: leagueIds["LaLiga"],
             football_club_stadium_id: stadiumIds["Camp Nou"],
             football_club_nickname: "Blaugrana",
             football_club_colors: ["blue", "red"],
@@ -113,7 +175,7 @@ db.football_clubs.insertMany(
             football_club_country: "Germany",
             football_club_city: "München",
             football_club_founded: NumberInt(1900),
-            football_club_league: "Bundesliga",
+            football_club_league_id: leagueIds["Bundesliga"],
             football_club_stadium_id: stadiumIds["Allianz Arena"],
             football_club_nickname: "Der FCB",
             football_club_colors: ["red", "white"],
@@ -126,7 +188,7 @@ db.football_clubs.insertMany(
             football_club_country: "Germany",
             football_club_city: "Dortmund",
             football_club_founded: NumberInt(1909),
-            football_club_league: "Bundesliga",
+            football_club_league_id: leagueIds["Bundesliga"],
             football_club_stadium_id: stadiumIds["Signal Iduna Park"],
             football_club_nickname: "Der BVB",
             football_club_colors: ["black", "yellow"],
@@ -139,7 +201,7 @@ db.football_clubs.insertMany(
             football_club_country: "Croatia",
             football_club_city: "Zagreb",
             football_club_founded: NumberInt(1945),
-            football_club_league: "Hrvatska nogometna liga",
+            football_club_league_id: leagueIds["Hrvatska nogometna liga"],
             football_club_stadium_id: stadiumIds["Stadion Maksimir"],
             football_club_nickname: "Modri",
             football_club_colors: ["blue"],
@@ -152,7 +214,7 @@ db.football_clubs.insertMany(
             football_club_country: "Croatia",
             football_club_city: "Split",
             football_club_founded: NumberInt(1911),
-            football_club_league: "Hrvatska nogometna liga",
+            football_club_league_id: leagueIds["Hrvatska nogometna liga"],
             football_club_stadium_id: stadiumIds["Poljud"],
             football_club_nickname: "Bili",
             football_club_colors: ["white"],
@@ -165,7 +227,7 @@ db.football_clubs.insertMany(
             football_club_country: "Croatia",
             football_club_city: "Ždralovi",
             football_club_founded: NumberInt(1933),
-            football_club_league: "Druga NL",
+            football_club_league_id: leagueIds["Prva NL"],
             football_club_stadium_id: stadiumIds["Stadion \"Brdo\""],
             football_club_nickname: "Ždralovi",
             football_club_colors: ["red", "black"],
@@ -178,7 +240,7 @@ db.football_clubs.insertMany(
             football_club_country: "England",
             football_club_city: "Wolverhampton",
             football_club_founded: NumberInt(1877),
-            football_club_league: "Championship",
+            football_club_league_id: leagueIds["Championship"],
             football_club_stadium_id: stadiumIds["Molineux Stadium"],
             football_club_nickname: "Wolves",
             football_club_colors: ["gold", "black"],
@@ -191,7 +253,7 @@ db.football_clubs.insertMany(
             football_club_country: "England",
             football_club_city: "London",
             football_club_founded: NumberInt(1905),
-            football_club_league: "Premier League",
+            football_club_league_id: leagueIds["Premier League"],
             football_club_stadium_id: stadiumIds["Stamford Bridge"],
             football_club_nickname: "The Blues",
             football_club_colors: ["blue", "white"],
@@ -204,7 +266,7 @@ db.football_clubs.insertMany(
             football_club_country: "Italy",
             football_club_city: "Milano",
             football_club_founded: NumberInt(1899),
-            football_club_league: "Serie A",
+            football_club_league_id: leagueIds["Serie A"],
             football_club_stadium_id: stadiumIds["San Siro (Giuseppe Meazza)"],
             football_club_nickname: "Rossoneri",
             football_club_colors: ["black", "red"],
@@ -217,7 +279,7 @@ db.football_clubs.insertMany(
             football_club_country: "Italy",
             football_club_city: "Milano",
             football_club_founded: NumberInt(1908),
-            football_club_league: "Serie A",
+            football_club_league_id: leagueIds["Serie A"],
             football_club_stadium_id: stadiumIds["San Siro (Giuseppe Meazza)"],
             football_club_nickname: "Nerazzurri",
             football_club_colors: ["black", "blue"],
@@ -230,7 +292,7 @@ db.football_clubs.insertMany(
             football_club_country: "Hungary",
             football_club_city: "Budapest",
             football_club_founded: NumberInt(1899),
-            football_club_league: "Nemzeti Bajnokság I",
+            football_club_league_id: leagueIds["Nemzeti Bajnokság I"],
             football_club_stadium_id: stadiumIds["Groupama Arena"],
             football_club_nickname: "Fradi",
             football_club_colors: ["green", "white"],

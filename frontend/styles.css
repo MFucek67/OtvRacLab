@@ -1,0 +1,131 @@
+.container {
+    max-width: 100%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: #0a3421 4px solid;
+    border-radius: 10px;
+}
+
+.desc {
+    line-height: 1.6;
+    white-space: normal;
+    background-color: #aad0bf;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.download a {
+    display: inline;
+    padding: 12px 22px;
+    background-color: #115335;
+    color: white;
+    border-radius: 6px;
+}
+
+.table_container {
+    overflow-x: auto;
+}
+
+.table_button {
+    display: block;
+    margin: 20px;
+    padding: 12px;
+    background-color: white;
+    color: green;
+    border: 2px solid #0a3421;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table_button:hover {
+    background-color: #0d4f32;
+    color: rgba(255, 255, 255, 0.574);
+}
+
+#search_form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#search_input {
+    flex: 1;
+    min-width: 150px;
+}
+
+#search_input,
+#search_field {
+    padding: 11px;
+    border: black solid 1px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#search_form button {
+    padding: 11px 20px;
+    border: 2px solid #0a3421;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+#search_form button:hover {
+    background-color: #0d4f32;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+th, td {
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+}
+
+td {
+    white-space: pre-line;
+}
+
+th {
+    background-color: #174d35;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #e4eee7;
+}
+
+.trophies_square div {
+    white-space: nowrap;
+    margin-bottom: 3px;
+}

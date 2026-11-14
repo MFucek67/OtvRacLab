@@ -12,6 +12,17 @@ let result = db.football_clubs.aggregate([
     {
         $unwind: "$stadium"
     },
+    {
+        $lookup: {
+            from: "leagues",
+            localField: "football_club_league_id",
+            foreignField: "_id",
+            as: "league"
+        }
+    },
+    {
+        $unwind: "$league"
+    },
     {  
         $lookup: {
             from: "trophies",
@@ -25,6 +36,8 @@ let result = db.football_clubs.aggregate([
             "_id": 0,
             "football_club_stadium_id": 0,
             "stadium._id": 0,
+            "football_club_league_id": 0,
+            "league._id": 0,
             "trophies.trophy_football_club_id": 0,
             "trophies._id": 0
         }

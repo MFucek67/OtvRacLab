@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://localhost/football_clubs.json",
+    "title": "Football clubs schema",
+    "description": "Dataset of football clubs for Otvoreno računarstvo",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Object that contains all information about one football club.",
+        "properties": {
+            "football_club_name": {
+                "type": "string",
+                "description": "Name of football club."
+            },
+            "football_club_country": {
+                "type": "string",
+                "description": "Country where football club is located."
+            },
+            "football_club_city": {
+                "type": "string",
+                "description": "City where football club is located."
+            },
+            "football_club_founded": {
+                "type": "integer",
+                "minimum": 1800,
+                "description": "Year when football club is founded."
+            },
+            "football_club_nickname": {
+                "type": ["string", "null"],
+                "description": "Nickname of football club."
+            },
+            "football_club_colors": {
+                "type": "array",
+                "minItems": 1,
+                "description": "Recognizable colors of football club.",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "football_club_mascots": {
+                "type": "array",
+                "description": "Official mascots of football club.",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "football_club_official_page": {
+                "type": ["string", "null"],
+                "format": "uri",
+                "description": "Official page URL."
+            },
+            "last_updated": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Date when the club's current statistics were last updated."
+            },
+            "stadium": {
+                "type": "object",
+                "description": "Object that contains all information about stadium of football club.",
+                "properties": {
+                    "stadium_name": {
+                        "type": "string",
+                        "description": "Name of football stadium."
+                    },
+                    "stadium_city": {
+                        "type": "string",
+                        "description": "City where football stadium is located."
+                    },
+                    "stadium_country": {
+                        "type": "string",
+                        "description": "Country where football stadium is located."
+                    },
+                    "stadium_capacity": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "description": "Maximum spectator capacity of the stadium."
+                    }
+                },
+                "required": ["stadium_name", "stadium_city", "stadium_country", "stadium_capacity"]
+            },
+            "league": {
+                "type": "object",
+                "description": "Object that contains all information about football league.",
+                "properties": {
+                    "league_name": {
+                        "type": "string",
+                        "description": "Name of the football league."
+                    },
+                    "league_country": {
+                        "type": "string",
+                        "description": "League's country of origin."
+                    },
+                    "league_level": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "Competition rank that the league represents."
+                    },
+                    "league_number_of_teams": {
+                        "type": "integer",
+                        "description": "Number of football teams that play in league."
+                    }
+                },
+                "required": ["league_name", "league_country", "league_level", "league_number_of_teams"]
+            },
+            "trophies": {
+                "type": "array",
+                "description": "Trophies won by the football club.",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "trophy_name": {
+                            "type": "string",
+                            "description": "Name of the trophy won."
+                        },
+                        "trophy_number": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "description": "Number of the trophies won."
+                        }
+                    },
+                    "required": ["trophy_name", "trophy_number"]
+                }
+            }
+        },
+        "required": ["football_club_name", "football_club_country", "football_club_city", "football_club_founded",
+            "football_club_colors", "last_updated", "stadium", "league", "trophies"]
+    }
+}

@@ -1,14 +1,14 @@
 # Football Clubs Dataset
 
-Ovaj otvoren skup podataka drži podatke o europskim nogometnim klubovima, njihovim stadionima i osvojenim 
-trofejima. Podaci su organizirani u tri zasebne kolekcije - `stadiums`, `football_clubs` i `trophies`.
+Ovaj otvoren skup podataka drži podatke o europskim nogometnim klubovima, njihovim stadionima i osvojenim trofejima.
+Podaci su organizirani u četiri zasebne kolekcije - `stadiums`, `football_clubs`, `leagues` i `trophies`.
 
-Skup podataka obuhvaća 12 nogometnih klubova, 11 stadiona i 34 zapisa o osvojenim trofejima. Za svaki
+Skup podataka obuhvaća 12 nogometnih klubova, 11 stadiona, 8 liga i 34 zapisa o osvojenim trofejima. Za svaki
 klub dostupni su podaci o:
 * nazivu kluba
 * gradu i državi kluba
 * godini osnutka
-* ligi u kojoj klub trenutačno igra
+* podaci ligi u kojoj klub trenutačno igra (ime, država, rang i broj natjecatelja)
 * nadimku kluba
 * bojama koje opisuju klub
 * maskotama kluba
@@ -18,6 +18,7 @@ klub dostupni su podaci o:
 * datumu i vrijeme kada su podaci zadnji put osvježeni
 
 Svaki nogometni klub povezan je s jednim stadionom, dok jedan stadion može biti povezan s više klubova.
+Svaki zapis o ligi povezan je s jednim nogometnim klubom, a zato više klubova može pripadati istoj ligi.
 Svaki zapis o trofeju povezan je s jednim nogometnim klubom, a klub može imati više osvojenih trofeja.
 Povezivanje kolekcija ostvareno je pomoću `ObjectId` identifikatora.
 

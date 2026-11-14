@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marko Fuček">
+    <meta name="description" content="Pregled i pretraživanje europskih nogometnih klubova.">
+    <meta name="version" content="1.0">
+    <title>Football Clubs Table</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <script src="/static/script.js" defer></script>
+    <div class="container">
+        <header>
+            <h2>Football Clubs Dataset</h2>
+            <h5>Tablični prikaz podataka s mogučnošću filtriranja</h5>
+        </header>
+        <form id="search_form">
+            <input type="text" id="search_input" placeholder="Unesite vrijednost...">
+            <select id="search_select">
+                <option value="">Sva polja (wildcard)</option>
+                <option value="football_club_name">Football Club Name</option>
+                <option value="football_club_country">Football Club Country</option>
+                <option value="football_club_city">Football Club City</option>
+                <option value="football_club_founded">Football Club Founded</option>
+                <option value="football_club_nickname">Football Club Nickname</option>
+                <option value="football_club_colors">Football Club Color</option>
+                <option value="football_club_mascots">Football Club Mascot</option>
+                <option value="stadium_name">Stadium Name</option>
+                <option value="stadium_city">Stadium City</option>
+                <option value="stadium_country">Stadium Country</option>
+                <option value="stadium_capacity">Stadium Capacity</option>
+                <option value="league_name">League Name</option>
+                <option value="league_country">League Country</option>
+                <option value="trophy_name">Trophy Name</option>
+                <option value="trophy_number">Trophy Number</option>
+            </select>
+            <button type="submit">Pretraži</button>
+        </form>
+        <div class="table_container">
+            <table id="clubs_table">
+                <thead>
+                    <tr>
+                        <th>Football Club Name</th>
+                        <th>Football Club Country</th>
+                        <th>Football Club City</th>
+                        <th>Football Club Founded</th>
+                        <th>Football Club Nickname</th>
+                        <th>Football Club Color(s)</th>
+                        <th>Football Club Mascot(s)</th>
+                        <th>Stadium Name</th>
+                        <th>Stadium City</th>
+                        <th>Stadium Capacity</th>
+                        <th>League Name</th>
+                        <th>Trophies (name and titles)</th>
+                    </tr>
+                </thead>
+                <tbody id="clubs_table_body">
+                </tbody>
+            </table>
+        </div>
+        <button class="table_button" onclick="go_to('/')">
+            Povratak na početnu stranicu
+        </button>
+        <div class="download">
+            <button class="table_button" onclick="download_filtered_csv()">Preuzmi filtrirane podatke (format CSV)</button>
+            <button class="table_button" onclick="download_filtered_json()">Preuzmi filtrirane podatke (format JSON)</button>
+        </div>
+    </div>
+</body>
+</html>
